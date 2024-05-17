@@ -1,6 +1,6 @@
 const  createError = require('http-errors');
 const  express = require('express');
-const  hbs = require('jade')
+const  hbs = require('hbs')
 const  path = require('path');
 const  logger = require('morgan');
 const cookieParser = require('cookie-parser');
@@ -8,7 +8,7 @@ const cookieParser = require('cookie-parser');
 const indexRouter = require('./routes/index');
 const fibonacciRouter = require('./routes/fibonacci')
 
-var app = express();
+const app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
