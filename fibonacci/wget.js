@@ -2,12 +2,12 @@ const http = require('http')
 const url = require('url')
 const util = require('util')
 
-const argUrl = process.argV[2]
+const argUrl = process.argv[2]
 const parsedUrl = url.parse(argUrl, true)
 
 const options = {
   host: parsedUrl.hostname,
-  port: parsedUrl.protocol,
+  port: parsedUrl.port,
   path: parsedUrl.pathname,
   method: 'GET'
 }
