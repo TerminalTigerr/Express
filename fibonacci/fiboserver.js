@@ -4,7 +4,7 @@ const logger = require('morgan')
 
 const app = express()
 app.use(logger('dev'))
-app.get('/fiboancci/"n', (req, res, next) => {
+app.get('/fibonacci/:n', (req, res, next) => {
   math.fibonacciAsync(Math.floor(req.params.n), (err, val) => {
     if (err) next(`FIBO SERVER ERROR ${err}`)
     else {
